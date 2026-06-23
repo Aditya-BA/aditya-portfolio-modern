@@ -150,3 +150,24 @@ if (window.OpenWidget) {
 } else {
   window.addEventListener("load", createCustomContactButton);
 }
+
+/* Premium Hero Profile Tilt */
+
+const profileOrbitCard = document.getElementById("profileOrbitCard");
+
+if (profileOrbitCard) {
+  profileOrbitCard.addEventListener("mousemove", function (event) {
+    const rect = profileOrbitCard.getBoundingClientRect();
+    const x = event.clientX - rect.left;
+    const y = event.clientY - rect.top;
+
+    const rotateY = ((x / rect.width) - 0.5) * 12;
+    const rotateX = ((y / rect.height) - 0.5) * -12;
+
+    profileOrbitCard.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+
+  profileOrbitCard.addEventListener("mouseleave", function () {
+    profileOrbitCard.style.transform = "rotateX(0deg) rotateY(0deg)";
+  });
+}
