@@ -118,3 +118,35 @@ window.__ow.product_name = "openwidget";
   !n.__ow.asyncInit && e.init();
   n.OpenWidget = n.OpenWidget || e;
 })(window, document, [].slice);
+
+/* Custom Floating Contact Button */
+
+function createCustomContactButton() {
+  const existingButton = document.querySelector(".custom-contact-widget");
+  if (existingButton) return;
+
+  const button = document.createElement("button");
+  button.className = "custom-contact-widget";
+  button.type = "button";
+  button.innerHTML = `
+    <span class="custom-contact-icon">✉</span>
+    <span class="custom-contact-text">Message Me</span>
+  `;
+
+  button.addEventListener("click", function () {
+    if (window.OpenWidget) {
+      OpenWidget.call("maximize", { feature: "form-contact" });
+    }
+  });
+
+  document.body.appendChild(button);
+}
+
+if (window.OpenWidget) {
+  OpenWidget.on("ready", function () {
+    OpenWidget.call("hide");
+    createCustomContactButton();
+  });
+} else {
+  window.addEventListener("load", createCustomContactButton);
+}
