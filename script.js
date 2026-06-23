@@ -43,3 +43,24 @@ function openModal(imageSrc) {
   modal.style.display = 'block';
   modalImg.src = imageSrc;
 }
+
+const insightPanel = document.getElementById("insightPanel");
+
+function rotateInsightPanelOnScroll() {
+  if (!insightPanel) return;
+
+  const section = insightPanel.closest(".scroll-3d-section");
+  const rect = section.getBoundingClientRect();
+  const windowHeight = window.innerHeight;
+
+  const progress = Math.min(Math.max((windowHeight - rect.top) / (windowHeight + rect.height), 0), 1);
+
+  const rotateY = -22 + progress * 44;
+  const rotateX = 12 - progress * 18;
+  const translateY = -20 + progress * 40;
+
+  insightPanel.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(${translateY}px)`;
+}
+
+window.addEventListener("scroll", rotateInsightPanelOnScroll);
+window.addEventListener("load", rotateInsightPanelOnScroll);
