@@ -1520,7 +1520,7 @@ footer a {
 
 .hero-gradient-name {
   display: inline-block;
-  font-size: clamp(3.4rem, 8vw, 7.8rem);
+  font-size: clamp(2.9rem, 6.5vw, 6.2rem);
   font-weight: 950;
   background: linear-gradient(
     270deg,
