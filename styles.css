@@ -1324,3 +1324,109 @@ footer a {
     transform: translateY(-5px);
   }
 }
+/* Modern Career Timeline */
+
+.career-timeline-modern {
+  position: relative;
+  margin-top: 2rem;
+  padding-left: 2.8rem;
+}
+
+.career-timeline-modern::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 8px;
+  bottom: 8px;
+  width: 4px;
+  border-radius: 999px;
+  background: linear-gradient(180deg, #003366 0%, #00a6c8 100%);
+  box-shadow: 0 0 18px rgba(0, 166, 200, 0.18);
+}
+
+.career-milestone {
+  position: relative;
+  margin-bottom: 1.5rem;
+}
+
+.milestone-marker {
+  position: absolute;
+  left: -2.8rem;
+  top: 1.35rem;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #003366, #00a6c8);
+  box-shadow:
+    0 0 0 6px rgba(0, 166, 200, 0.10),
+    0 8px 20px rgba(0, 51, 102, 0.18);
+}
+
+.milestone-card {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.82), rgba(210, 245, 239, 0.48)),
+    radial-gradient(circle at top right, rgba(0, 166, 200, 0.10), transparent 35%);
+  border: 1px solid rgba(0, 51, 102, 0.12);
+  border-radius: 22px;
+  padding: 1.35rem 1.4rem;
+  box-shadow: 0 18px 48px rgba(0, 51, 102, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.milestone-card:hover {
+  transform: translateX(8px);
+  box-shadow: 0 28px 70px rgba(0, 51, 102, 0.14);
+  border-color: rgba(0, 51, 102, 0.22);
+}
+
+.milestone-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(0, 51, 102, 0.08);
+  color: var(--primary);
+  font-size: 0.78rem;
+  font-weight: 900;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+}
+
+.milestone-card h3 {
+  margin: 0 0 0.6rem;
+  color: var(--primary);
+  font-size: 1.3rem;
+  line-height: 1.2;
+}
+
+.milestone-card p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 0.98rem;
+}
+
+@media (max-width: 680px) {
+  .career-timeline-modern {
+    padding-left: 2.2rem;
+  }
+
+  .career-timeline-modern::before {
+    left: 10px;
+  }
+
+  .milestone-marker {
+    left: -2.2rem;
+    width: 16px;
+    height: 16px;
+  }
+
+  .milestone-card {
+    padding: 1.1rem;
+  }
+
+  .milestone-card:hover {
+    transform: translateY(-4px);
+  }
+}
