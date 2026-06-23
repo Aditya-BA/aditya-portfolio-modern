@@ -1089,3 +1089,238 @@ footer a {
     height: 38px;
   }
 }
+
+/* Experience Page - Finance Analytics Focus */
+
+.experience-hero p {
+  max-width: 980px;
+  font-size: 1.08rem;
+}
+
+.experience-card,
+.supporting-card,
+.capability-card {
+  background:
+    linear-gradient(145deg, rgba(255, 255, 255, 0.78), rgba(210, 245, 239, 0.48)),
+    radial-gradient(circle at top right, rgba(0, 166, 200, 0.14), transparent 35%);
+  border: 1px solid rgba(0, 51, 102, 0.13);
+  border-radius: 24px;
+  padding: clamp(1.25rem, 3vw, 2rem);
+  box-shadow: 0 20px 58px rgba(0, 51, 102, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.experience-card:hover,
+.supporting-card:hover,
+.capability-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 78px rgba(0, 51, 102, 0.16);
+  border-color: rgba(0, 51, 102, 0.24);
+}
+
+.featured-experience {
+  position: relative;
+  overflow: hidden;
+}
+
+.featured-experience::before {
+  content: "";
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  right: -120px;
+  top: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 166, 200, 0.22), transparent 68%);
+  pointer-events: none;
+}
+
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.5rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.experience-company {
+  display: inline-flex;
+  color: var(--primary);
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.experience-header h2,
+.supporting-card h3,
+.capability-card h3 {
+  color: var(--primary);
+  margin: 0 0 0.45rem;
+}
+
+.experience-meta {
+  color: var(--muted);
+  font-weight: 700;
+  margin: 0;
+}
+
+.experience-badge {
+  display: grid;
+  place-items: center;
+  min-width: 98px;
+  min-height: 98px;
+  border-radius: 50%;
+  color: #ffffff;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  font-weight: 900;
+  box-shadow: 0 18px 42px rgba(0, 51, 102, 0.22);
+}
+
+.experience-summary {
+  font-size: 1.05rem;
+  max-width: 1050px;
+}
+
+.impact-summary-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.95rem;
+  margin-top: 1.5rem;
+}
+
+.impact-box {
+  background: rgba(255, 255, 255, 0.62);
+  border: 1px solid rgba(0, 51, 102, 0.1);
+  border-radius: 18px;
+  padding: 1rem;
+  box-shadow: 0 12px 32px rgba(0, 51, 102, 0.07);
+}
+
+.impact-box strong {
+  display: block;
+  color: var(--primary);
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
+}
+
+.impact-box span {
+  display: block;
+  color: var(--muted);
+  line-height: 1.45;
+  font-size: 0.92rem;
+}
+
+.experience-timeline {
+  display: grid;
+  gap: 1rem;
+}
+
+.experience-step {
+  display: grid;
+  grid-template-columns: 70px 1fr;
+  gap: 1rem;
+  align-items: start;
+  background: rgba(255, 255, 255, 0.58);
+  border: 1px solid rgba(0, 51, 102, 0.1);
+  border-radius: 20px;
+  padding: 1.2rem;
+  box-shadow: 0 14px 38px rgba(0, 51, 102, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.experience-step:hover {
+  transform: translateX(8px);
+  box-shadow: 0 22px 54px rgba(0, 51, 102, 0.13);
+}
+
+.step-number {
+  display: grid;
+  place-items: center;
+  width: 54px;
+  height: 54px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #ffffff;
+  font-weight: 900;
+  box-shadow: 0 12px 28px rgba(0, 51, 102, 0.18);
+}
+
+.experience-step h3 {
+  margin: 0 0 0.4rem;
+  color: var(--primary);
+}
+
+.experience-step p {
+  margin: 0;
+}
+
+.capability-grid,
+.supporting-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.25rem;
+}
+
+.capability-card p,
+.supporting-card p {
+  margin-bottom: 0;
+}
+
+.tool-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+.tool-cloud span {
+  padding: 0.5rem 0.85rem;
+  border-radius: 999px;
+  background: rgba(0, 51, 102, 0.08);
+  color: var(--primary);
+  border: 1px solid rgba(0, 51, 102, 0.09);
+  font-weight: 800;
+  font-size: 0.9rem;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.tool-cloud span:hover {
+  transform: translateY(-3px);
+  background: rgba(0, 166, 200, 0.14);
+}
+
+@media (max-width: 950px) {
+  .impact-summary-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .capability-grid,
+  .supporting-experience-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 680px) {
+  .experience-header {
+    flex-direction: column;
+  }
+
+  .experience-badge {
+    min-width: auto;
+    min-height: auto;
+    border-radius: 999px;
+    padding: 0.7rem 1rem;
+  }
+
+  .impact-summary-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-step {
+    grid-template-columns: 1fr;
+  }
+
+  .experience-step:hover {
+    transform: translateY(-5px);
+  }
+}
